@@ -1,0 +1,198 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  user-select: none;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+
+  color: #fff;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(rgb(70, 70, 70), rgb(0, 0, 0));
+}
+
+.app {
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, .9);
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  box-shadow: 0 0 .7rem #fff;
+
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-grow: 1;
+
+  font-size: 5rem;
+  font-weight: 500;
+
+  transition: all .5s linear;
+}
+
+.timer.working {
+  flex-grow: 0;
+}
+
+.round-list {
+  margin: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+
+  width: 100%;
+  flex-grow: 0;
+
+  list-style: none;
+
+  overflow-y: scroll;
+
+  max-height: 200px;
+  
+  transition: all .5s linear;
+}
+
+.round-list::-webkit-scrollbar {
+  width: 0;
+}
+
+.round-list.working {
+  flex-grow: 1;
+}
+
+.round-item {
+  width: max-content;
+}
+
+.btn {
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  background: none;
+  border: none;
+
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+
+  color: #fff;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  letter-spacing: .3rem;
+  transform: translateX(.3rem);
+
+  transition: text-shadow .2s linear;
+}
+
+.btn:focus,
+.btn:hover {
+  outline: none;
+
+  text-shadow: 0 0 .3rem #fff;
+}
+
+.round-btn {
+  transition: opacity .3s linear,
+              text-shadow .2s linear;
+
+  display: none;
+  opacity: 0;
+}
+
+@media (max-width: 530px) {
+  .app {
+    width: 450px;
+    height: 450px;
+  }
+
+  .timer {
+    font-size: 4rem;
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    width: 400px;
+    height: 400px;
+  }
+
+  .timer {
+    font-size: 3.5rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .app {
+    width: 350px;
+    height: 350px;
+  }
+
+  .timer {
+    font-size: 3rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
+    margin-bottom: .7rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .app {
+    width: 300px;
+    height: 300px;
+  }
+
+  .timer {
+    font-size: 2.5rem;
+  }
+
+  .btn {
+    font-size: 1.1rem;
+    margin-bottom: .4rem;
+  }
+}
