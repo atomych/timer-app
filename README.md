@@ -1,1 +1,6 @@
-# timer-app
+# Timer app
+
+## Stack
+* HTML
+* CSS
+* JS
